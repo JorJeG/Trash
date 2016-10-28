@@ -1,2 +1,4 @@
 # Trash
-First
+
+  Hi!
+This repo collects my javascript file.
