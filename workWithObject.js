@@ -57,12 +57,6 @@ var map = Object.create(null);
 var map = {"пицца": 54, "кекс": 55};
 for (var name in map) console.log(name);
 console.log("пицца" in map);*/
-var obj = new String("54");
-String.prototype.add = function() {
-  return console.log(this + " " + "String");
-};
-for(var m in obj) {
-  if (typeof obj[m] == "function") console.log(m);
-}
-obj.add();
+/* Выдаёт список методов
+-------------------------------------------------------------------*/
 console.log(Object.getOwnPropertyNames(Math));
