@@ -1,4 +1,4 @@
-
+/*
 var convertNumber = function(number, base) {
 // Строка с разрядами в нужной системе
   var str = [];
@@ -12,7 +12,7 @@ var convertNumber = function(number, base) {
   return result;
   };
   exponentA(base, 20);
-/* Переводит только в двоичную систему
+ Переводит только в двоичную систему
 -----------------------------------------------------------
 var number = 1000;
 var result = "";
@@ -25,7 +25,7 @@ if (str[i] <= temp) {
   result += String("0");
 }
 }
-console.log(result);*/
+console.log(result);
 //Переводит в 2ную, 8ную и в 16ную
 //var number = 4034;
   var result = "";
@@ -57,3 +57,5 @@ console.log(result);*/
   return result;
 };
 console.log(convertNumber(254274, 2));
+*/
+number.toString(16); // Переводит в HEX
