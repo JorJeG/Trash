@@ -1,0 +1,18 @@
+body {
+  background-color: #0ca;
+}
+p {
+  font-size: 15px;
+}
+.box {
+  border: 4px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #ccc;
+}
+header, main, footer {
+  margin: 30px auto;
+  width: 600px;
+}
+#content {
+  padding: 8px;
+}

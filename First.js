@@ -1,2 +1,3 @@
 'use strict'
-console.log("Hello World");
+var name = "Georgiy";
+console.log("Hello " + name);

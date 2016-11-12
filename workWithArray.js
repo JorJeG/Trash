@@ -128,6 +128,7 @@ function chunkArrayInGroups(arr, size) {
 }
 
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 3));*/
+/**/
 /*
 function slasher(arr, howMany) {
   // it doesn't always pay to be first
@@ -135,7 +136,7 @@ function slasher(arr, howMany) {
   return result;
 }
 
-console.log(slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 5));*/
+console.log(slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 2));*/
 /*
 function mutation(arr) {
   var newA = arr[1].toLowerCase().split("");
@@ -221,10 +222,10 @@ function rot13(str) { // LBH QVQ VG!
 
 // Change the inputs below to test
 console.log(rot13("SERR CVMMN!.."));*/
-var string = JSON.stringify([{name: "Georgiy", born: 1986},{name: "Adam", born: 1988},
-                            {name: "Alex", born: 1999}, {name: "Charlie", born: 1922}]);
+//var string = JSON.stringify([{name: "Georgiy", born: 1986},{name: "Adam", born: 1988},
+//                            {name: "Alex", born: 1999}, {name: "Charlie", born: 1922}]);
 //var id = JSON.parse(cats.json);
-var anc = JSON.parse(string);
+//var anc = JSON.parse(string);
 /*function filter(array, test) {
   var passed = [];
   for (var i = 0; i < array.length; i++) {
@@ -235,7 +236,7 @@ var anc = JSON.parse(string);
 }
 console.log(filter(anc, function(person) {
   return person.name[0] == "A";
-}));*/
+}));
 console.log(anc.filter(function(person) {
   return person.born == 1986;
 }));
@@ -245,4 +246,66 @@ console.log(anc.map(function(person) {
 console.log(anc.reduce(function(min, cur) {
   if (cur.born < min.born) return cur;
   else return min;
-}));
+}));*/
+/* Rotate number and return Max
+56789 -> 67895 -> 68957 -> 68579 -> 68597
+-----------------------------------------------------------------
+var number = 326278643;
+var str = String(number).split("");
+var count = str.length;
+var elem1 = [];
+var elem2 = [];
+var elem3 = [];
+elem3 = elem3.concat(elem3, str);
+var elem4 = [];
+
+for (var i = 0; i < count; i++) {
+  elem1 = str.shift();
+  str.push(elem1);
+  elem1 = str.shift();
+  elem2.push(elem1);
+  elem3 = elem3.concat(elem2, str);
+}
+elem4 = elem3.slice(0, count).join("");
+for (var j = 0; j <= elem3.length; j = j + count) {
+  if (Number(elem3.slice(j, j + count).join("")) > Number(elem4)) {
+    elem4 = elem3.slice(j, j + count).join("");
+  }
+}
+ Работа без цикла
+-----------------------------------------------------------------
+elem1 = str.shift();
+str.push(elem1);
+elem1 = str.shift();
+elem2.push(elem1);
+
+elem1 = str.shift();
+str.push(elem1);
+elem1 = str.shift();
+elem2.push(elem1);
+//elem3 = elem3.concat(elem2, str);
+elem1 = str.shift();
+str.push(elem1);
+elem1 = str.shift();
+elem2.push(elem1);
+
+elem1 = str.shift();
+str.push(elem1);
+elem1 = str.shift();
+elem2.push(elem1);
+
+elem1 = str.shift();
+elem2.push(elem1);
+
+console.log(str);
+console.log(elem1);
+console.log(elem2);
+console.log(elem3);
+console.log(elem4);
+console.log(count);
+*/
+var str = "Argo";
+var arr = [str];
+console.log("Argo".slice(0, 2));
+arr.push(str.slice(0, 2), str.slice(2));
+console.log(arr);
