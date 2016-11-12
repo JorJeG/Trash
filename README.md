@@ -9,3 +9,12 @@ This repo collects my javascript file.
 - First
 - aboutFunction
 - workWithArray
+- workWithNode
+- workWithObject
+- homeWork
+- arrayAndObject
+- electric life
+- convert
+- RegExp
+- simple
+- Folder(Random quotes)
