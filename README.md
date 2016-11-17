@@ -2,7 +2,6 @@
 
 
 ## Aloha
-  Hi!
 This repo collects my javascript file.
 
 ## Current File
