@@ -103,20 +103,70 @@ var quote = [{"autor": "Конфуций",
 document.getElementById('quote').appendChild(elt("p", quote[randNumb].qoute,
           elt("footer", "- ",
               elt("strong", quote[randNumb].autor))));*/
-var randNumb = Math.floor((Math.random())*quote.length);
-  $('#mainQuote').text(quote[randNumb].qoute);
-  $('#footerQuote').text("- " + quote[randNumb].autor);
+//$('#run').click(function(){
+//var randNumb = Math.floor((Math.random())*quote.length);
 
+
+
+      //        $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+      //          $("#mainQuote").append(a[0].content + "<p>— " + a[0].title + "</p>");
+      //        });
+
+      $(function() {
+          getQuote();
+        });
+
+      $("#run").click(function() {
+          getQuote();
+        });
+
+      function getQuote() {
+          $.ajax({
+                url: 'https://crossorigin.me/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+                success: function(data) {
+                      var post = data.shift();
+                      $("#mainQuote").html(post.content);
+                      $("#footerQuote").text("- " + post.title);
+                     // var linktext = (post.content);
+                     // linktext = $(linktext).text();
+                          },
+                cache: false
+                });
+      }
+
+      $('#tweet').click(function(){
+        window.open("https://twitter.com/intent/tweet?text="+ $('#quote').text());
+      });
+//$('#run').click(function(){
+//  $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+//    $("#mainQuote").append(a[0].content + "<p>— " + a[0].title + "</p>");
+//  });
+//});
+/*
+$(document).ready(function() {
+var randNumb = Math.floor((Math.random())*quote.length);
+//  $('#mainQuote').text(quote[randNumb].qoute);
+//  $('#footerQuote').text("- " + quote[randNumb].autor);
+$.ajax({
+  url: "http://github.com/JorJeG/Trash/blob/master/Random%20quotes/js/quotes.json",
+  dataType: "json",
+  success: function(json) {
+//$.getJSON("", function(json) {
+          //$(".message").html(JSON.stringify(json));
+          $('#mainQuote').html(json[1].qoute);
+      //  });
 $('#run').click(function(){
   var randNumb = Math.floor((Math.random())*quote.length);
   $('#mainQuote').text(quote[randNumb].qoute);
   $('#footerQuote').text("- " + quote[randNumb].autor);
+}
 });
-
+});
 // Твит кнопка
 $('#tweet').click(function(){
   window.open("https://twitter.com/intent/tweet?text="+ $('#quote').text());
 });
+});*/
 // document.location.reload() не работает в CodePen
 
 /* Показывает расположение элемента в браузере
