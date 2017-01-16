@@ -17,3 +17,5 @@ This repo collects my javascript file.
 - RegExp
 - simple
 - Folder(Random quotes)
+- Folder(Calculator)
+- Folder(CSSPosition)
