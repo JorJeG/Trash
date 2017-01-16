@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #252525;
+  color: #F70;
+}
+h1 {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+  color: #b0bec5;
+  font-size: 2em;
+  font-weight: 900;
+}
+a:hover {
+  color: #ff1744;
+}
+.wrapper {
+  padding-bottom: 7px;
+}
+.selector {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.button {
+  text-align: center;
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 5px;
+  border: 2px solid #FC0;
+}
+.active {
+  background-color: #FC0;
+  color: #252525;
+}
+.button:hover {
+  background-color: #FC0;
+  color: #252525;
+}
+#search {
+  display: block;
+}
+.online, .offline {
+  border: 2px solid #FC0;
+  margin: 7px;
+}
+.info {
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+}
+.info img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+}
+.bio {
+  font-size: .8em;
+}
+#search .stream {
+  box-shadow: -1.5em 0 0 #76ff03;
+  width: 65%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#search .online {
+  display: flex;
+  flex-flow: row wrap;
+}
+.game {
+
+  font-size: 1.5em;
+}
+@media screen and (max-width: 840px) {
+  #search .online, #search .offline {
+    display: block;
+  }
+  #search .stream {
+      box-shadow: 0 -1.5em 0 #76ff03;
+      width: 100%;
+  }
+  #search .info {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+}

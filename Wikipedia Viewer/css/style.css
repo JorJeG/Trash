@@ -1,0 +1,111 @@
+
+
+body, html {
+  background: hsla(172, 69%, 40%, 1);
+  font-family: 'Monserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+input[type=text] {
+  color: hsla(0, 100%, 73%, 1);
+  background: hsla(255, 40%, 40%, 1);
+  font-size: 1.1em;
+  text-align: center;
+  padding-left: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: hsla(255, 40%, 100%, 1);
+}
+input[type=text]:focus {
+  outline: none;
+}
+#searcharea {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  background: rgba(188, 218, 204, 1);
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+#searcharea label {
+  line-height: 1.5;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  color: #A61c1c;
+}
+#searcharea input {
+  display: block;
+  margin: 10px auto;
+  width: 70%;
+}
+#update {
+  width: 70%;
+  margin: 0 auto;
+}
+#update ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#update a {
+  background: rgba(244, 67, 54, .1);
+  color: black;
+  text-align: left;
+  display: block;
+}
+#update a:hover {
+  background-color: hsla(4, 70%, 58%, 1);
+  color: white;
+}
+#update li {
+  padding: 5px;
+  border-top: 3px solid #FFF;
+  border-left: 0px solid hsla(0, 0%, 100%, 0);
+  border-left-width: 0px;
+  transition: border-left-width .6s ease;
+}
+#update li:hover {
+  border-left-width: 15px;
+  border-left: 15px solid hsla(0, 0%, 100%, 1);
+}
+#update h2 {
+  font-family: inherit;
+  font-size: 1.8em;
+  padding-bottom: 10px;
+}
+#update p {
+  font-family: inherit;
+  font-size: 1em;
+  padding-left: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  background-color: rgba(54, 119, 215, .8);
+  color: white;
+  height: 20px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: rgba(54, 119, 215, 1);
+}
+@media screen and (max-width: 720px) {
+  #searcharea {
+    padding: 20px 0 20px 0;
+    width: 100%;
+  }
+  #update {
+    width: 100%;
+  }
+}

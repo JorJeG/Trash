@@ -309,3 +309,6 @@ var arr = [str];
 console.log("Argo".slice(0, 2));
 arr.push(str.slice(0, 2), str.slice(2));
 console.log(arr);
+
+var arsr = [0,2,3,4];
+console.log([1,2,3,4].every((v, i) => v == arsr[i]));

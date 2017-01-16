@@ -216,6 +216,7 @@ function findSmallestLength(s) {
 }
 console.log(findSmallestLength("turns out random test cases are easier than writing out basic ones 43"));
 */
+/*
 (var weekDay = function(exports) {
   var names = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
 
@@ -227,4 +228,86 @@ console.log(findSmallestLength("turns out random test cases are easier than writ
   };
 })(this.weekDay = {});
 
-console.log(weekDay.number("Пятница"));
+console.log(weekDay.number("Пятница"));*/
+/* Нужно сложить два бинарных числа
+-------------------------------------
+// Попробовать
+// уравнять их длину
+// и с конца их складывать простым  for с if
+function add(num1, num2) {
+  num1 = num1.split("");
+  num2 = num2.split("");
+  // сравниваем длины
+  while (num1.length != num2.length) {
+  if (num1.length > num2.length) {
+    num2.unshift("0");
+  } else if (num1.length < num2.length) {
+    num1.unshift("0");
+  }
+}
+  var temp = 0;
+  var res = [];
+  // складываем
+  for(var i = num1.length - 1; i >= 0; i--) {
+    var temp2 = Number(num1[i]) + Number(num2[i]) + Number(temp);
+  //  console.log(temp2);
+    if (temp2 > 2) {
+      temp2 = 1;
+      temp = 1;
+      res.unshift(temp2);
+    } else if (temp2 == 2) {
+      temp2 = 0;
+      temp = 1;
+      res.unshift(temp2);
+    } else {
+      temp = 0;
+      res.unshift(temp2);}
+  }
+  // добавляем если нужно разряд
+  if (temp == 1) res.unshift("1");
+  // убираем если нужно нули
+  while (res[0] != 1 && res.length > 1) {
+    res.shift();
+  }
+  return res.join("");
+}
+
+console.log(add("101100010111111110110000100000110011110011111000011010", "00000001111000110001110011100100010010111001011011001111101000101101"));
+/////////1111001011110001011100011000011011010001111000011100001000111
+//00000001111001011110001011100011000011011010001111000011100001000111
+//////0001111001011110001011100011000011011010001111000011100001000111*/
+
+/* Нужно сложить два числа
+------------------------------------------------------------
+function sumStrings(num1, num2) {
+//  if(num1 > Number.MAX_SAFE_INTEGER || num2 > Number.MAX_SAFE_INTEGER) {
+      num1 = num1.split("");
+      num2 = num2.split("");
+      // сравниваем длины
+      while (num1.length != num2.length) {
+      if (num1.length > num2.length) {
+        num2.unshift("0");
+      } else if (num1.length < num2.length) {
+        num1.unshift("0");
+      }
+    }
+      var temp = 0;
+      var res = [];
+      // складываем
+      for(var i = num1.length - 1; i >= 0; i--) {
+        var temp2 = Number(num1[i]) + Number(num2[i]) + Number(temp);
+        if (temp2 > 9) {
+          temp2 = temp2 % 10;
+          console.log(temp2);
+          temp = 1;
+          res.unshift(temp2);
+        } else {
+          temp = 0;
+          res.unshift(temp2);}
+      }
+      // добавляем если нужно разряд
+      if (temp == 1) res.unshift("1");
+      return res.join("").replace(/^0+/, "");
+//  } else return eval(num1 + "+" + num2);
+}
+console.log(sumStrings('00103', '08567'));*/

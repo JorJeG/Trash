@@ -59,4 +59,9 @@ for (var name in map) console.log(name);
 console.log("пицца" in map);*/
 /* Выдаёт список методов
 -------------------------------------------------------------------*/
-console.log(Object.getOwnPropertyNames(Math));
+var obj = new String("real");
+//String.prototype.add = function(){
+  //return console.log("m");
+//};
+console.log(Object.getOwnPropertyNames(String.prototype));
+// есть разница между String и String.prototype

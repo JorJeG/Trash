@@ -61,3 +61,15 @@ for(var prop in newObject[1]) {
 /* ГЛУБОКОЕ СРАВНЕНИЕ
 
 */
+function myReplace(str, before, after) {
+  if (before.match(/^[A-Z]/)) {
+    var first = after.substring(0,1).toUpperCase();
+    after = first + after.substring(1);
+  }
+  var regExp = new RegExp(before, "gi");
+  var newstr = str.replace(regExp, after)
+  return newstr;
+
+}
+
+console.log(myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped"));

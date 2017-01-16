@@ -63,5 +63,40 @@ p {
     padding: 15px;
 }
 a {
-
+  color: hsla(170, 70%, 30%, 1);
+}
+.home__links {
+    margin-right: auto;
+    margin-left: auto
+}
+.home__link {
+        width: 230px
+    }
+.home__link:focus, .home__link:hover {
+        top: -4px
+    }
+.home__link {
+    padding-top: 14px;
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    height: 54px;
+    border-width: 2px;
+    border-right: solid;
+    border-left: solid;
+    border-color: #141c22;
+    background-color: #141c22;
+    background-image: url("../img/home__link-bg.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 5px 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: top;
+    transition-property: top
 }

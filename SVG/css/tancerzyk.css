@@ -1,0 +1,139 @@
+/*img {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  animation: infiniteMe 4s infinite linear;
+}
+@keyframes infiniteMe {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.top {
+  height: 300px;
+  background: hsla(360, 100%, 0%, 0.8);
+}
+.top_element {
+  background-image: url("../img/chess_1px.svg");
+  background-repeat: repeat-x;
+  height: 300px;
+  width: auto;;
+  position: relative;
+  background-position: bottom;
+}*/
+html,body,div,span,figure{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}
+body{background:#27c5cd}
+::-moz-selection{background:#0a0a0a;color:#FFF}
+::selection{background:#0a0a0a;color:#FFF}
+a{text-decoration:none;cursor:pointer;color:#f5f5f5}
+a:hover{text-decoration:underline}
+.tekst{color:#32413d;font-family:'Lato',arial,sans-serif;text-transform:uppercase;font-size:14px;line-height:28px;font-weight:bold;display:block;letter-spacing:2px;max-width:100%;position:absolute;bottom:20px;left:30px;z-index:1}
+span{display:block}
+.centered-box{color:#f5f5f5;font-family:'Lato',arial,sans-serif;text-transform:uppercase;font-size:14px;line-height:28px;font-weight:bold;display:block;letter-spacing:2px;white-space:normal;position:absolute;max-width:100%;left:50%;top:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:3}
+
+.dziecko{text-align:center;position:relative;display:inline-block;width:100px;z-index:2}
+.dziecko .glowa{width:100%;height:75px;border-radius:50%;position:relative;-webkit-animation:ruchGlowaDziecko 1.2s ease-in-out infinite;animation:ruchGlowaDziecko 1.2s ease-in-out infinite}
+.dziecko .glowa:before{content:"";display:block;position:absolute;left:0;top:0;background:#fac5c6;width:100%;height:100%;border-radius:100%;z-index:2}
+.dziecko .wlos{display:block;position:absolute;left:50%;top:-2px;background:#A6541E;width:3px;height:6px;margin-left:-1.5px;z-index:3}
+.dziecko .wlos:before{content:"";width:6px;height:6px;border:3px solid #A6541E;border-bottom:none;border-right:none;position:absolute;top:-8px;left:50%;margin-left:-1.5px;border-top-left-radius:25px}
+.dziecko .wlos:after{content:"";width:6px;height:6px;border:3px solid #A6541E;border-top:none;border-left:none;position:absolute;top:-14px;left:50%;margin-left:7px;border-bottom-right-radius:25px}
+.dziecko .oczy{width:100%;position:absolute;top:16px;left:0;z-index:4}
+.dziecko .oczy .oko{position:absolute;width:14px;height:8px;top:0;border:3px solid #da87a6;border-width:0px 3px 3px 3px;border-radius:0 0 14px 14px}
+.dziecko .oczy .oko.oko-lewe{left:22%}
+.dziecko .oczy .oko.oko-lewe:before{content:"";display:block;position:absolute;left:-17px;top:5px;background:#f0b2bc;width:20px;height:20px;border-radius:100%}
+.dziecko .oczy .oko.oko-prawe{right:22%}
+.dziecko .oczy .oko.oko-prawe:before{content:"";display:block;position:absolute;right:-17px;top:5px;background:#f0b2bc;width:20px;height:20px;border-radius:100%}
+.dziecko .buzia{width:60%;height:47%;position:absolute;top:40%;left:17%;border:2px solid #da87a6;border-width:0px 2px 2px 2px;border-radius:0 0 50% 50% / 0 0 100% 100%;z-index:5}
+.dziecko .uszy{width:100%;height:20px;position:absolute;top:50%;left:0}
+.dziecko .uszy .ucho{position:absolute;width:20px;height:10px;top:-5px;background:#fac5c6;border-radius:10px}
+.dziecko .uszy .ucho.ucho-lewe{left:-10px}
+.dziecko .uszy .ucho.ucho-prawe{right:-10px}
+.dziecko .tlow{display:block;width:100%;height:50px;position:relative;z-index:-1;-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation:ruchBioderka 1.2s ease-in-out infinite;animation:ruchBioderka 1.2s ease-in-out infinite}
+.dziecko .pielucha{width:60%;height:35px;position:absolute;left:20%;bottom:0;background:#f7f7f7;border-radius:50%}
+.dziecko .brzuch{position:absolute;top:-2px;left:25%;height:0;width:0;border-left:25px solid transparent;border-right:25px solid transparent;border-bottom:30px solid #fac5c6}
+.dziecko .sutki{position:absolute;top:50%;left:50%}
+.dziecko .sutki .sutki{position:absolute;width:3px;height:3px;top:16px;margin-left:-2px;background:#da87a6;border-radius:50%}
+.dziecko .sutki .sutki.sutek-lewy{left:-5px}
+.dziecko .sutki .sutki.sutek-prawy{left:5px}
+.dziecko .rece{display:block;width:100%;position:relative;top:7px;z-index:-1}
+.dziecko .rece .reka-lewa,
+.dziecko .rece .reka-prawa{position:absolute;top:50%;background:#fac5c6;width:28px;height:7px;border-radius:10px}
+.dziecko .rece .reka-lewa{left:18px;-webkit-transform-origin:center right;transform-origin:center right;-webkit-animation:ruchRekaLewa 1.2s ease-in-out infinite;animation:ruchRekaLewa 1.2s ease-in-out infinite}
+.dziecko .rece .reka-prawa{right:18px;-webkit-transform-origin:center left;transform-origin:center left;-webkit-animation:ruchRekaPrawa 1.2s ease-in-out infinite;animation:ruchRekaPrawa 1.2s ease-in-out infinite}
+.dziecko .nogi{display:block;width:100%;height:17px;position:relative;z-index:-2}
+.dziecko .nogi .noga-lewa,
+.dziecko .nogi .noga-prawa{position:absolute;left:50%;top:-2px;background:#fac5c6;width:12px;margin-left:-6px;height:17px;-webkit-transform-origin:top center;transform-origin:top center}
+.dziecko .nogi .noga-lewa{margin-left:-12px;-webkit-animation:ruchNogaLewaGora 0.7s ease-in-out infinite;animation:ruchNogaLewaGora 0.7s ease-in-out infinite}
+.dziecko .nogi .noga-prawa{margin-left:2px;-webkit-animation:ruchNogaPrawaGora 0.7s ease-in-out infinite;animation:ruchNogaPrawaGora 0.7s ease-in-out infinite}
+.dziecko-cien{position:absolute;left:20%;bottom:0px;display:block;width:60%;height:20px;background:#22abb3;border-radius:50%;-webkit-animation:ruchCien 1.2s ease-in-out infinite;animation:ruchCien 1.2s ease-in-out infinite;z-index:-1}
+
+/*! animacja glowa */
+@-webkit-keyframes ruchGlowaDziecko{
+0%, 100%{-webkit-transform:rotateZ(-10deg);transform:rotateZ(-10deg)}
+25%{-webkit-transform:rotateZ(-11deg);transform:rotateZ(-11deg)}
+50%{-webkit-transform:rotateZ(10deg);transform:rotateZ(10deg)}
+75%{-webkit-transform:rotateZ(11deg);transform:rotateZ(11deg)}
+}
+@keyframes ruchGlowaDziecko{
+0%, 100%{-webkit-transform:rotateZ(-10deg);transform:rotateZ(-10deg)}
+25%{-webkit-transform:rotateZ(-11deg);transform:rotateZ(-11deg)}
+50%{-webkit-transform:rotateZ(10deg);transform:rotateZ(10deg)}
+75%{-webkit-transform:rotateZ(11deg);transform:rotateZ(11deg)}
+}
+/*! animacja bioderka */
+@-webkit-keyframes ruchBioderka{
+0%, 100%{-webkit-transform:rotateZ(8deg);transform:rotateZ(8deg)}
+15%{-webkit-transform:rotateZ(10deg);transform:rotateZ(10deg)}
+50%{-webkit-transform:rotateZ(-8deg);transform:rotateZ(-8deg)}
+65%{-webkit-transform:rotateZ(-10deg);transform:rotateZ(-10deg)}
+}
+@keyframes ruchBioderka{
+0%, 100%{-webkit-transform:rotateZ(8deg);transform:rotateZ(8deg)}
+15%{-webkit-transform:rotateZ(10deg);transform:rotateZ(10deg)}
+50%{-webkit-transform:rotateZ(-8deg);transform:rotateZ(-8deg)}
+65%{-webkit-transform:rotateZ(-10deg);transform:rotateZ(-10deg)}
+}
+/*! animacja reka lewa */
+@-webkit-keyframes ruchRekaLewa{
+0%,100%{-webkit-transform:rotateZ(20deg);transform:rotateZ(20deg)}
+50%{-webkit-transform:rotateZ(-20deg);transform:rotateZ(-20deg)}
+}
+@keyframes ruchRekaLewa{
+0%,100%{-webkit-transform:rotateZ(20deg);transform:rotateZ(20deg)}
+50%{-webkit-transform:rotateZ(-20deg);transform:rotateZ(-20deg)}
+}
+/*! animacja reka prawa */
+@-webkit-keyframes ruchRekaPrawa{
+0%, 100%{-webkit-transform:rotateZ(20deg);transform:rotateZ(20deg)}
+50%{-webkit-transform:rotateZ(-20deg);transform:rotateZ(-20deg)}
+}
+@keyframes ruchRekaPrawa{
+0%, 100%{-webkit-transform:rotateZ(20deg);transform:rotateZ(20deg)}
+50%{-webkit-transform:rotateZ(-20deg);transform:rotateZ(-20deg)}
+}
+/*! animacja noga lewa */
+@-webkit-keyframes ruchNogaLewaGora{
+0%, 50%, 100%{height:17px}
+25%{height:8px}
+}
+@keyframes ruchNogaLewaGora{
+0%, 50%, 100%{height:17px}
+25%{height:8px}
+}
+/*! animacja noga prawa */
+@-webkit-keyframes ruchNogaPrawaGora{
+0%, 50%, 100%{height:15px}
+75%{height:12px}
+}
+@keyframes ruchNogaPrawaGora{
+0%, 50%, 100%{height:17px}
+75%{height:12px}
+}
+/*! animacja cien */
+@-webkit-keyframes ruchCien{
+0%, 50%, 100%{left:19%;width:62%}
+25%, 35%, 75%, 85%{left:22%;width:56%}
+}
+@keyframes ruchCien{
+0%, 50%, 100%{left:19%;width:62%}
+25%, 35%, 75%, 85%{left:22%;width:56%}
+}

@@ -1,0 +1,70 @@
+html, body {
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  padding: 5px;
+  line-height: 50px;
+  padding: 5px;
+}
+.container {
+  background: hsla(70, 70%, 80%, 1);
+  overflow: hidden;
+}
+.title {
+  margin: 15px 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3em;
+}
+.menu {
+  background-color: #FFF;
+}
+.selector {
+  margin: 2px 0;
+  padding: 0 5px;
+  float: right;
+  clear: right;
+  height: 20px;
+  width: 60px;
+  background: #FFF;
+}
+.allList {
+  background: #FF0000;
+  width: 85px;
+  height: 16px;
+  transition: right 1s;
+}
+.onList {
+  background: #FF0000;
+  width: 85px;
+  height: 16px;
+  transition: right 1s;
+}
+.offList {
+  background: #FF0000;
+  width: 85px;
+  height: 16px;
+  transition: right 1s;
+}
+.circle {
+  width: 12px;
+  height: 12px;
+  animation: shadow 1.6s infinite;
+  border-radius: 50%;
+  background: hsla(180, 70%, 50%, 1);
+}
+@keyframes shadow {
+  0%,100% {box-shadow: 0 0 9px hsla(180, 70%, 50%, 1);
+  background: hsla(180, 70%, 60%, 1)}
+  50% {box-shadow: 0 0 9px hsla(180, 70%, 100%, 1);
+  background: hsla(180, 70%, 40%, 1)}
+}
+.allList:hover, .onList:hover, .offList:hover {
+  right: 0;
+}

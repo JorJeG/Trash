@@ -1,0 +1,76 @@
+.wrapper {
+  margin-top: 250px;
+  width: 500px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #999;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 40px 30px #000;
+}
+.child_01 {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(140, 100%, 100%, .7);
+  float: left;
+  clear: none;
+}
+.child_02 {
+  display: block;
+  width: 700px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(160, 100%, 100%, 1);
+  overflow: visible;
+  position: absolute;
+  left: 50px;
+  top: -150px;
+  transform: rotateZ(45deg);
+  clear: none;
+}
+.child_03 {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(220, 100%, 50%, .7);
+  float: left;
+  clear: both;
+}
+.child_04 {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(0, 100%, 50%, .7);
+  float: left;
+}
+.child_05 {
+  display: block;
+  width: 33.5%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(80, 100%, 50%, .8);
+  overflow: visible;
+  clear: both;
+}
+.child_06 {
+  display: block;
+  width: 33.5%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsla(60, 100%, 50%, .8);
+  clear: both;
+  float: left;
+}
