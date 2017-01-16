@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+    mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+      <!-- в chai есть много всего, выносим assert в глобальную область -->
+      <script>
+        var assert = chai.assert;
+      </script>
+  </head>
+  <body>
+
+    <!-- тестируемый код -->
+    <script src="js/lesson.js"></script>
+
+    <!-- в этом скрипте находятся спеки -->
+    <script src="test/test.js"></script>
+
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <div id="mocha"></div>
+
+    <!-- запустить тесты! -->
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
