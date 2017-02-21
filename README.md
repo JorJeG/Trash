@@ -19,3 +19,5 @@ This repo collects my javascript file.
 - Folder(Random quotes)
 - Folder(Calculator)
 - Folder(CSSPosition)
+
+![alt text](https://github.com/JorJeG/Trash/blob/master/SVG/img/lines.svg "samle")
