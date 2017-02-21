@@ -20,4 +20,4 @@ This repo collects my javascript file.
 - Folder(Calculator)
 - Folder(CSSPosition)
 
-![alt text](https://github.com/JorJeG/Trash/blob/master/SVG/img/lines.svg "samle")
+![alt text](https://github.com/JorJeG/Trash/blob/master/SVG/img/2dc41b36f3c22ebc36842a0046887b78.jpg "sample")
